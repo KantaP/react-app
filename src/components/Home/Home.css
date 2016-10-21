@@ -1,0 +1,7 @@
+.column {
+    height: 150px;
+    border: 1px #d0c7b7 solid;
+    background: #e0dacf;
+    text-align: center;
+    line-height: 150px;
+}
