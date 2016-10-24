@@ -1,6 +1,6 @@
 export const SET_USER = 'SET_USER'
 
-export const setUser = (user) => ({
+export const setUser = (username) => ({
     type: SET_USER,
-    user
+    username
 })

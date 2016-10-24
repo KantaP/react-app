@@ -1,4 +1,4 @@
-import { SET_USER } from '../actions'
+import { SET_USER } from '../actions/user'
 
 const initialState = {
     username: "Hello World"
@@ -6,7 +6,7 @@ const initialState = {
 
 export default function(state = initialState, action) {
     if (action.type === SET_USER) {
-        return { username: action.user }
+        return Object.assign({}, state, { username: action.username })
     }
     return state
 }

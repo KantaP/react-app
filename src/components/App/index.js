@@ -1,4 +1,4 @@
-import React , { Component } from 'react'
+import React , { Component , PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
 import Page from '../Page'
@@ -7,10 +7,13 @@ import * as MaterialUI from 'material-ui'
 
 class App extends Component {
 
+    static propTypes = {
+        children: PropTypes.any
+    }
+
     state = {
         drawer: false
     }
-
 
     _toggleDrawer = () =>{
         this.setState({drawer: !this.state.drawer}) 
