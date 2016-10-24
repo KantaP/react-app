@@ -4,9 +4,9 @@ import './Home.css'
 
 class Home extends Component {
 
-    propTypes: {
+    static propTypes = {
         userState: React.PropTypes.any
-    }
+    } 
 
     render() {
         return (

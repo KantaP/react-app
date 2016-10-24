@@ -1,6 +1,3 @@
-export const SET_USER = 'SET_USER'
+import * as user from './user'
 
-export const setUser = (user) => ({
-    type: SET_USER,
-    user
-})
+export { user }

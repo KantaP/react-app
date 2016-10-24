@@ -7,15 +7,13 @@ import * as MaterialUI from 'material-ui'
 
 class App extends Component {
 
-    constructor(props){
-        super(props)
-        this.state = {
-            drawer: false
-        }
+    state = {
+        drawer: false
     }
 
+
     _toggleDrawer = () =>{
-        this.setState({drawer: !this.state.drawer})
+        this.setState({drawer: !this.state.drawer}) 
     }
 
     render(){
@@ -24,8 +22,8 @@ class App extends Component {
                 <MaterialUI.AppBar onLeftIconButtonTouchTap={this._toggleDrawer} />
                 <Page children={this.props.children} />
                 <MaterialUI.Drawer open={this.state.drawer}>
-                    <MaterialUI.MenuItem><Link to="/">Home</Link></MaterialUI.MenuItem>
-                    <MaterialUI.MenuItem><Link to="about">About</Link></MaterialUI.MenuItem>
+                    <Link to="/"><MaterialUI.MenuItem>Home</MaterialUI.MenuItem></Link>
+                    <Link to="about"><MaterialUI.MenuItem>About</MaterialUI.MenuItem></Link>
                     <MaterialUI.MenuItem onTouchTap={this._toggleDrawer}>Close</MaterialUI.MenuItem>
                 </MaterialUI.Drawer>
             </div>

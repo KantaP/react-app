@@ -2,7 +2,7 @@ import React , { PropTypes , Component } from 'react'
 import { connect } from 'react-redux'
 
 class Page extends Component {
-    propTypes: {
+    static propTypes = {
         children: PropTypes.any
     }
 
@@ -13,7 +13,7 @@ class Page extends Component {
                     <div className="all-100">
                         {this.props.children}
                     </div>
-                </div> 
+                </div>  
             </div>
         )
     }
